@@ -55,22 +55,45 @@ class ScrollPage extends StatelessWidget {
       children: <Widget>[
         _background,
         Center(
-            child: ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
-          child: RaisedButton(
-            elevation: 5,
-            hoverElevation: sqrt1_2,
-            color: Colors.blueAccent,
-            child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.0),
-                child: Text(
-                  'Welcome',
-                  style: TextStyle(color: Colors.white),
-                )),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
+          
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
+              child: RaisedButton(
+                elevation: 5,
+                hoverElevation: sqrt1_2,
+                color: Colors.blueAccent,
+                child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 40.0),
+                    child: Text(
+                      'Welcome',
+                      style: TextStyle(color: Colors.white),
+                    )),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
+              child: RaisedButton(
+                elevation: 5,
+                hoverElevation: sqrt1_2,
+                color: Colors.blueAccent,
+                child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 40.0),
+                    child: Text(
+                      'Ultimate',
+                      style: TextStyle(color: Colors.white),
+                    )),
+                onPressed: () {
+                  Navigator.pushNamed(context, 'ultimate');
+                },
+              ),
+            )
+          ],
         ))
       ],
     );
